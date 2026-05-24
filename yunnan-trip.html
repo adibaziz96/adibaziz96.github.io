@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yunnan Family Trip — Oct 26 - Nov 2, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#0F6E56;--teal-l:#E1F5EE;--blue:#185FA5;--blue-l:#E6F1FB;--purple:#534AB7;--purple-l:#EEEDFE;--coral:#D85A30;--coral-l:#FAECE7;--amber:#BA7517;--amber-l:#FAEEDA;--dark:#2C2C2A;--gray:#5F5E5A;--bg:#FAFAF8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3',sans-serif;color:var(--dark);background:var(--bg);line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:0 24px}
+.hero{background:linear-gradient(135deg,#0F6E56 0%,#185FA5 50%,#534AB7 100%);color:white;padding:70px 24px 50px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z' fill='none' stroke='rgba(255,255,255,0.06)' stroke-width='1'/%3E%3C/svg%3E")}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3rem);font-weight:700;letter-spacing:-0.02em;margin-bottom:6px;position:relative}
+.hero .route{font-size:1rem;font-weight:300;opacity:0.9;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:4px}
+.hero .dates{font-size:0.9rem;opacity:0.7}
+.overview{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:28px 0}
+.ov-card{background:white;border-radius:12px;padding:16px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.06)}
+.ov-card .label{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray);margin-bottom:2px}
+.ov-card .value{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--teal)}
+.section{margin:40px 0 20px;text-align:center}
+.section h2{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;margin-bottom:3px}
+.section .sub{font-size:0.85rem;color:var(--gray)}
+.section.kunming h2{color:var(--teal)}.section.dali h2{color:var(--blue)}.section.lijiang h2{color:var(--purple)}
+.day{background:white;border-radius:14px;overflow:hidden;margin-bottom:24px;box-shadow:0 3px 16px rgba(0,0,0,0.06)}
+.day-hdr{padding:14px 20px;color:white;display:flex;justify-content:space-between;align-items:center}
+.day-hdr.teal{background:var(--teal)}.day-hdr.blue{background:var(--blue)}.day-hdr.purple{background:var(--purple)}.day-hdr.gray{background:var(--gray)}
+.day-hdr h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700}
+.day-hdr .date{font-size:0.8rem;opacity:0.8}
+.day-body{padding:20px}
+.day-body p{margin-bottom:8px;font-size:0.93rem}
+.place{font-weight:600}.cn{color:var(--gray);font-size:0.82rem}
+.photo-wrap{margin:10px 0 14px;border-radius:10px;overflow:hidden;position:relative}
+.photo-wrap img{width:100%;height:260px;object-fit:cover;display:block;background:#eee}
+.photo-wrap .caption{position:absolute;bottom:0;left:0;right:0;padding:8px 14px;background:linear-gradient(transparent,rgba(0,0,0,0.7));color:white;font-size:0.78rem;font-style:italic}
+.time-block{font-weight:600;color:var(--purple);font-size:0.9rem;margin:12px 0 4px;padding:4px 0;border-bottom:1px solid #eee}
+.time-block.blue-t{color:var(--blue)}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0 4px}
+.tag{font-size:0.72rem;padding:2px 9px;border-radius:16px;font-weight:600}
+.tag.nature{background:var(--teal-l);color:var(--teal)}.tag.culture{background:var(--blue-l);color:var(--blue)}.tag.scenic{background:var(--purple-l);color:var(--purple)}
+.tip{background:var(--teal-l);border-left:3px solid var(--teal);padding:10px 14px;border-radius:0 8px 8px 0;margin:10px 0;font-size:0.85rem;color:var(--teal)}
+.warn{background:var(--coral-l);border-left:3px solid var(--coral);padding:10px 14px;border-radius:0 8px 8px 0;margin:10px 0;font-size:0.85rem;color:var(--coral)}
+.hotel{background:var(--amber-l);border-left:3px solid var(--amber);padding:10px 14px;border-radius:0 8px 8px 0;margin:10px 0;font-size:0.85rem;color:var(--amber)}
+.transport{display:inline-block;background:var(--bg);border:1px solid #ddd;border-radius:16px;padding:3px 12px;font-size:0.78rem;color:var(--gray);margin:6px 0}
+.cost{display:inline-block;background:var(--coral-l);border-radius:16px;padding:3px 12px;font-size:0.78rem;color:var(--coral);font-weight:600;margin:2px 4px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:0.88rem}
+th{background:var(--teal);color:white;padding:8px 12px;text-align:left;font-weight:600}
+td{padding:8px 12px;border-bottom:1px solid #eee}
+tr:nth-child(even) td{background:#FAFAF8}
+.budget th{background:var(--coral)}
+.hotel-table th{background:var(--amber)}
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:16px 0}
+.tip-card{background:white;border-radius:12px;padding:18px;box-shadow:0 2px 10px rgba(0,0,0,0.05)}
+.tip-card h4{font-family:'Playfair Display',serif;font-size:1rem;margin-bottom:6px}
+.tip-card li{font-size:0.88rem;color:var(--gray);margin-bottom:3px}
+.tip-card ul{padding-left:16px}
+.footer{text-align:center;padding:36px 24px;color:var(--gray);font-size:0.82rem}
+@media(max-width:600px){.hero{padding:40px 16px 30px}.photo-wrap img{height:180px}.overview{grid-template-columns:repeat(2,1fr)}}
+@media print{.day{break-inside:avoid;box-shadow:none;border:1px solid #ddd}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>Yunnan Family Trip</h1>
+  <div class="route">Kunming · Dali · Lijiang</div>
+  <div class="dates">26 October — 2 November 2026 · From Kuala Lumpur</div>
+</div>
+
+<div class="container">
+
+<div class="overview">
+  <div class="ov-card"><div class="label">Route</div><div class="value">KL → 3 Cities</div></div>
+  <div class="ov-card"><div class="label">Duration</div><div class="value">8 Days</div></div>
+  <div class="ov-card"><div class="label">Max Altitude</div><div class="value">2,400m</div></div>
+  <div class="ov-card"><div class="label">Travelers</div><div class="value">5 + 3 Kids</div></div>
+</div>
+
+<!-- ===== DAY 1 ===== -->
+<div class="section kunming"><h2>Kunming</h2><div class="sub">The Spring City · 1,890m</div></div>
+
+<div class="day">
+  <div class="day-hdr teal"><h3>Day 1 — KL to Kunming</h3><span class="date">Mon, Oct 26</span></div>
+  <div class="day-body">
+    <span class="transport">✈ KL → Kunming · 3:45 PM — 7:40 PM</span>
+    <p>Arrive Kunming Changshui Airport at 7:40 PM. Take Didi or airport shuttle to hotel (~30-40 min).</p>
+    <p>Late arrival — settle in, have dinner near the hotel, rest up for tomorrow's train!</p>
+    <div class="hotel">🏨 <strong>V Home Hotel</strong> (Kunming South High-Speed Railway Station) — <strong>RM 54.00</strong>/night</div>
+    <div class="tip">💡 Download Didi, Alipay/WeChat Pay, and Trip.com before leaving KL!</div>
+  </div>
+</div>
+
+<!-- ===== DAY 2 ===== -->
+<div class="section dali"><h2>Dali</h2><div class="sub">Mountains Meet the Lake · 2,000m</div></div>
+
+<div class="day">
+  <div class="day-hdr blue"><h3>Day 2 — Train to Dali + Ancient Town</h3><span class="date">Tue, Oct 27</span></div>
+  <div class="day-body">
+    <span class="transport">🚄 Kunming South → Dali · ~2h 15min</span>
+    <span class="cost">RM 85/adult</span><span class="cost">RM 59/child (Dahlia)</span>
+    <div class="photo-wrap">
+      <img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPYBocqoDgByBe3u8I7F9gtv8MnvPWReh1c1uB5O-rYv_J41WdGHYC7OCuRnVOaoT4RyR7kz8hOn2RAimEQ4qxOZKBMrXCu-CRYwr_WFcpVcylnU9Xc6rtE6yIDIykPHzbzd69BLJgtH8RfsQ=s4800-w800-h600" alt="Dali Three Pagodas and Ancient Town" loading="lazy">
+      <div class="caption">Dali — ancient Bai city with Cangshan Mountains behind</div>
+    </div>
+    <p>Arrive hotel ~<strong>12:30 PM</strong>. Afternoon exploring:</p>
+    <div class="time-block blue-t">12:30 PM — evening</div>
+    <p><span class="place">Dali Ancient City (大理古城)</span> — Walled city with flat, wide streets perfect for strollers. White-walled Bai architecture, red lanterns, canals. Try erkuai rice cakes and rose pastries. South Gate (Nancheng Men) is the most photogenic entrance.</p>
+    <div class="tags"><span class="tag culture">🏛️ Ancient city</span><span class="tag culture">🎨 Bai culture</span></div>
+    <div class="hotel">🏨 <strong>Dali Yuxiuyuan Mountain View B&B</strong> (Ancient City South Gate) — <strong>RM 80-100</strong>/night</div>
+  </div>
+</div>
+
+<!-- ===== DAY 3 ===== -->
+<div class="day">
+  <div class="day-hdr blue"><h3>Day 3 — Erhai Lake + S-Bend → Train to Lijiang</h3><span class="date">Wed, Oct 28</span></div>
+  <div class="day-body">
+    <div class="time-block blue-t">8:00 AM — 12:00 PM · Erhai Lake</div>
+    <div class="photo-wrap">
+      <img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNGjOpCKndM3RShN4YR4mheIjW6XYxONwakS13p9eeKWTHpQF7FXpBHHNq0HLjlYdKtRud7rEKNseX-OLTZugWSjHEY9JTGEeyjc_ehiYgQXVvrHMIgXNxefDaLlzySK97kS4gCz29l1sMqfg=s4800-w788-h380" alt="Erhai Lake panorama" loading="lazy">
+      <div class="caption">Erhai Lake & Cangshan Mountains — the iconic Dali panorama</div>
+    </div>
+    <p><span class="place">Erhai Lake (洱海)</span> — Walk along the Ecological Corridor (paved, stroller-friendly). Crystal water, mountain reflections. Kids throw pebbles, watch fishermen.</p>
+
+    <div class="time-block blue-t">12:00 PM — 4:00 PM · Panxi S-Bend</div>
+    <div class="photo-wrap">
+      <img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOBZdOHpzpg0cTy5aETTPoBFynzMuW6REameKfge7iskUXAamw1cdzlLnJpjEvCBuZzrPjVB-f5-q-sNbsj7IO-9FJnmxIjlpJfBg9jnozVpZaSN0gAqEJv_iGnnh8MVu5IWVfHZzHl9wcV=s4800-w800-h600" alt="Erhai Lake scenic road" loading="lazy">
+      <div class="caption">Panxi S-Bend along Erhai Lake — iconic scenic drive</div>
+    </div>
+    <p><span class="place">Panxi S-Bend (磻溪S弯)</span> — The most Instagrammable road in Dali! S-shaped road curving along Erhai Lake with mountains on both sides. Lakeside restaurants for lunch.</p>
+
+    <div class="time-block blue-t">4:00 — 5:00 PM · Return & checkout</div>
+    <p>Head back to hotel, check out, go to Dali Railway Station.</p>
+
+    <div class="time-block blue-t">5:30 — 7:30 PM · Train to Lijiang</div>
+    <span class="transport">🚄 Dali → Lijiang · ~1h 30min</span>
+    <span class="cost">RM 51/adult</span><span class="cost">RM 26/child (Dahlia)</span>
+    <div class="tags"><span class="tag scenic">🌊 Erhai Lake</span><span class="tag scenic">📸 S-Bend road</span></div>
+    <div class="hotel">🏨 <strong>Mulanyu Tangsu Hotel</strong>, Lijiang — <strong>RM 230.00</strong> (4 days / 3 nights)</div>
+  </div>
+</div>
+
+<!-- ===== LIJIANG ===== -->
+<div class="section lijiang"><h2>Lijiang</h2><div class="sub">Ancient Town Under Snow Peaks · 2,400m</div></div>
+
+<!-- DAY 4 -->
+<div class="day">
+  <div class="day-hdr purple"><h3>Day 4 — Blue Moon Valley + Baisha</h3><span class="date">Thu, Oct 29</span></div>
+  <div class="day-body">
+    <div class="time-block">8:00 AM — 12:30 PM · Blue Moon Valley + Spruce Meadow</div>
+    <div class="photo-wrap">
+      <img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPMT6B311um3k-m4F8m4_tEjlL3waC4xJLH4X7WmZQeNHmNnb0b906d3gV0T3O8SaHfzKcRXpOKSIqd_Rhte48QjZLZoF-BSbUSU_wuLV4iMewR6AE0E4Bw1eAp5EksfCdv4CSXS-YNvhUDSg=s4800-w800-h600" alt="Blue Moon Valley turquoise pools" loading="lazy">
+      <div class="caption">Blue Moon Valley — turquoise glacial pools at foot of Jade Dragon Snow Mountain</div>
+    </div>
+    <span class="cost">RM 82/person (entrance + shuttle bus)</span>
+    <p><span class="place">Blue Moon Valley + Spruce Meadow (蓝月谷 + 云杉坪)</span> — The highlight of Lijiang! Turquoise glacial lakes with white waterfalls. The color comes from copper ions and limestone. Shuttle bus — no hiking needed. Spruce Meadow accessible by cable car for alpine views.</p>
+    <div class="warn">⚠️ At ~3,100m altitude — limit to 2-3 hours. Bring sunscreen, warm layers, water. Buy portable oxygen canisters at entrance. Watch babies closely.</div>
+
+    <div class="time-block">2:00 PM — 4:30 PM · Baisha Ancient Town</div>
+    <div class="photo-wrap">
+      <img src="https://lh3.googleusercontent.com/place-photos/AJRVUZPstQiiHA1ymT01e2QIz5Tykfdhv2DwDIRN75MkRaXTZkQTUd3G1Z869WoaUZiUirhOSyUzAvGVGOsT1X7MJCRls9diYrBORulvYKaNxDYHRXOXDkWYu9qQnDJ7f71hlVDPs1gcNL09WWbJgPR_LNEAUQ=s4800-w800-h600" alt="Shuhe/Baisha Lijiang ancient streets" loading="lazy">
+      <div class="caption">Baisha Ancient Town — quiet Naxi heritage village</div>
+    </div>
+    <p><span class="place">Baisha Ancient Town (白沙古镇)</span> — Oldest of Lijiang's ancient towns. Famous <strong>Baisha Murals</strong> (600 years old). Quiet cobblestone streets, Naxi houses, tie-dye workshops. Stunning Jade Dragon Snow Mountain views from main street.</p>
+    <div class="tags"><span class="tag scenic">💎 Glacial valley</span><span class="tag nature">🌲 Alpine meadow</span><span class="tag culture">🖼️ Ancient murals</span></div>
+  </div>
+</div>
+
+<!-- DAY 5 -->
+<div class="day">
+  <div class="day-hdr purple"><h3>Day 5 — Black Dragon Pool + Old Town + Lashihai</h3><span class="date">Fri, Oct 30</span></div>
+  <div class="day-body">
+    <div class="time-block">8:00 — 9:30 AM · Black Dragon Pool</div>
+    <div class="photo-wrap">
+      <img src="https://lh3.googleusercontent.com/place-photos/AJRVUZOLVsaCBIL_bVzhuHlsjzwmPIVBY1xzvwTFTLL46kxG-d9dDbmHz0BPbZzSRk_t915NlSmgFO94Yu3S63l9TWdoV-BhHF7MDjWwrqdeQ5nWNrL9NG8wJQQqqiwWGxOSJu9nj6pU0k6KlVvdD-MuziVg_Q=s4800-w800-h600" alt="Black Dragon Pool Lijiang" loading="lazy">
+      <div class="caption">Black Dragon Pool — Jade Dragon Snow Mountain reflected in crystal-clear water</div>
+    </div>
+    <span class="cost">RM 50/person</span>
+    <p><span class="place">Black Dragon Pool (黑龙潭)</span> — Crystal pool reflecting Jade Dragon Snow Mountain. Red pavilion, stone bridges, ancient trees. Flat, stroller-friendly. Koi fish. Best in morning light!</p>
+
+    <div class="time-block">9:30 AM — 1:00 PM · Lijiang Ancient Town</div>
+    <div class="photo-wrap">
+      <img src="https://lh3.googleusercontent.com/place-photos/AJRVUZMrghBmAb6Aa0iIW0d5XAVAF1Uyag2SyQa2okVOq5yb_cUmA3AfWbwFmM-5J8DS4fpCGP353JExIpyD87Givrn7FzNzPKyo2R5wWZm1WXCZwaMvtBPBYmkD9HN15CRO9GQZECr9ZL6OKzsHDKc=s4800-w800-h600" alt="Lijiang Ancient Town" loading="lazy">
+      <div class="caption">Lijiang Ancient Town — UNESCO World Heritage, canals and Naxi culture</div>
+    </div>
+    <p><span class="place">Lijiang Ancient Town (丽江古城)</span> — UNESCO site. Canals, giant water wheels, Mu's Residence. Sifang Street, Naxi handicrafts, yak yogurt, fried Baba bread. 4-year-old will love the waterwheels!</p>
+
+    <div class="time-block">2:00 — 3:00 PM · Travel to Lashihai</div>
+    <div class="time-block">3:00 — 6:00 PM · Lashihai Wetland</div>
+    <div class="photo-wrap">
+      <img src="https://lh3.googleusercontent.com/place-photos/AJRVUZNPzybdgbskPP_7LJyuD-LidgM-94Ucy3oMnpBC5YOx5v5jNjy-hm9yzHAmoEDDbqo2CK_p1Eq057zJESmrjneci7NofK8VzK2x6SZgLMSNeu_Kgj9Q_2-rbFoP0VaDgrKgIKI7U5IwyKQgjw=s4800-w800-h600" alt="Lashihai Wetland" loading="lazy">
+      <div class="caption">Lashihai Wetland — Yunnan's first nature reserve with migratory birds</div>
+    </div>
+    <p><span class="place">Lashihai Wetland (拉市海湿地公园)</span> — Bird Watching Corridor, boardwalks, Swan Lake, Children's Playground. Late Oct = bird migration from Siberia! Boat rides, horse riding. Stroller-accessible.</p>
+    <p><strong>6:00 — 6:45 PM:</strong> Return to hotel.</p>
+    <div class="tags"><span class="tag scenic">🪞 Mirror pool</span><span class="tag culture">🏘️ UNESCO town</span><span class="tag nature">🐦 Wetland birds</span></div>
+  </div>
+</div>
+
+<!-- DAY 6 -->
+<div class="day">
+  <div class="day-hdr purple"><h3>Day 6 — Premium Rest Day</h3><span class="date">Sat, Oct 31</span></div>
+  <div class="day-body">
+    <p>Your <strong>luxury rest day</strong> — check into the premium Lisiman hotel and enjoy! After 4 active days, both families deserve a slower pace. Let the kids play, enjoy the scenery, relax.</p>
+    <p>Optional: revisit a favourite spot, explore Shuhe Ancient Town (quieter, spring-fed canals), or enjoy the hotel's mountain views.</p>
+    <div class="hotel">🏨 <strong>Lisiman Xinsu Yushiye</strong> — <strong>RM 500-600</strong>/night. Premium hotel for a special night!</div>
+  </div>
+</div>
+
+<!-- DAY 7 -->
+<div class="day">
+  <div class="day-hdr gray"><h3>Day 7 — Checkout + Train to Kunming</h3><span class="date">Sun, Nov 1</span></div>
+  <div class="day-body">
+    <span class="transport">🚄 Lijiang → Kunming · ~4 hours · 5:00 PM — 9:00 PM</span>
+    <span class="cost">RM 135/person</span>
+    <p>Check out by midday. Morning free — final walk in Lijiang, pick up souvenirs (Naxi woodcarvings, Pu'er tea, dried flowers, yak jerky).</p>
+    <p>5:00 PM train to Kunming. Arrive ~9:00 PM.</p>
+    <div class="hotel">🏨 <strong>V Home Hotel</strong> (Kunming South Station) — <strong>RM 54.00</strong>/night</div>
+  </div>
+</div>
+
+<!-- DAY 8 -->
+<div class="day">
+  <div class="day-hdr gray"><h3>Day 8 — Fly Home to KL</h3><span class="date">Mon, Nov 2</span></div>
+  <div class="day-body">
+    <span class="transport">✈ Kunming → KL · 10:45 AM — 2:45 PM</span>
+    <p>Morning flight home! Head to airport early (allow 2+ hours with kids). Land in KL at 2:45 PM. Selamat pulang! 🇲🇾</p>
+  </div>
+</div>
+
+<!-- HOTEL SUMMARY -->
+<h3 style="font-family:'Playfair Display',serif;text-align:center;margin:32px 0 12px;color:var(--amber)">Hotel Summary</h3>
+<table class="hotel-table">
+  <tr><th>Night</th><th>Hotel</th><th>Location</th><th style="text-align:right">Cost</th></tr>
+  <tr><td>Oct 26</td><td>V Home Hotel</td><td>KMG South Station</td><td style="text-align:right">RM 54</td></tr>
+  <tr><td>Oct 27</td><td>Yuxiuyuan B&B</td><td>Dali South Gate</td><td style="text-align:right">RM 80-100</td></tr>
+  <tr><td>Oct 28-30</td><td>Mulanyu Tangsu</td><td>Lijiang</td><td style="text-align:right">RM 230 (3N)</td></tr>
+  <tr><td>Oct 31</td><td>Lisiman Xinsu Yushiye</td><td>Lijiang</td><td style="text-align:right">RM 500-600</td></tr>
+  <tr><td>Nov 1</td><td>V Home Hotel</td><td>KMG South Station</td><td style="text-align:right">RM 54</td></tr>
+</table>
+
+<!-- TIPS -->
+<div class="section"><h2 style="color:var(--dark)">Practical Tips</h2></div>
+<div class="tips-grid">
+  <div class="tip-card"><h4 style="color:var(--teal)">🚂 Transport</h4><ul>
+    <li>Book trains via Trip.com or 12306</li><li>Under-1.2m children ride free</li>
+    <li>Private van within cities (~RM 200-300/day)</li><li><strong>Apps:</strong> Didi, Alipay, WeChat, Trip.com</li></ul></div>
+  <div class="tip-card"><h4 style="color:var(--blue)">🎒 Packing</h4><ul>
+    <li>Baby carriers > strollers at most spots</li><li>Warm layers (Lijiang nights: 4-10°C)</li>
+    <li>Rain jacket, sunscreen + hats</li><li>Wet wipes, hand sanitizer</li></ul></div>
+  <div class="tip-card"><h4 style="color:var(--purple)">🍜 Food</h4><ul>
+    <li>Crossing-the-bridge noodles (过桥米线)</li><li>Erkuai rice cakes, yak yogurt</li>
+    <li>Fresh pomegranates, mandarins</li><li><strong>Halal:</strong> look for 清真 signs</li></ul></div>
+  <div class="tip-card"><h4 style="color:var(--coral)">🚨 Emergency</h4><ul>
+    <li>China: 120 (medical), 110 (police)</li><li>MY Embassy: +86-10-6532 2531</li>
+    <li>30-day visa-free for MY passport</li><li>Keep hotel name card in Chinese!</li></ul></div>
+</div>
+
+</div>
+<div class="footer">🌸 Selamat Jalan & Enjoy Yunnan!<br><small>Family Trip Planner — Oct 26 - Nov 2, 2026</small></div>
+</body>
+</html>
